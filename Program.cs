@@ -13,138 +13,138 @@ namespace Prova
     static void Main()
     {
       // Questão #01
-      // Console.WriteLine("Digite 5 numeros");
-      // int[] numbers = new int[5];
+      Console.WriteLine("Digite 5 numeros");
+      int[] numbers = new int[5];
 
-      // int perValues = 0;
-      // int nonPerValues = 0;
-      // int positiveValues = 0;
-      // int negativeValues = 0;
+      int perValues = 0;
+      int nonPerValues = 0;
+      int positiveValues = 0;
+      int negativeValues = 0;
 
-      // for (int i = 0; i < numbers.Length; i++)
-      // {
-      //   bool validValue = false;
-      //   while (!validValue)
-      //   {
-      //     Console.WriteLine($"Digite o {i + 1}° valor: ");
-      //     if (int.TryParse(Console.ReadLine(), out numbers[i]))
-      //     {
-      //       Console.WriteLine(numbers[i]);
-      //       validValue = true;
-      //     }
-      //     else
-      //     {
-      //       Console.WriteLine("Por favor insira um valor valido");
-      //     };
+      for (int i = 0; i < numbers.Length; i++)
+      {
+        bool validValue = false;
+        while (!validValue)
+        {
+          Console.WriteLine($"Digite o {i + 1}° valor: ");
+          if (int.TryParse(Console.ReadLine(), out numbers[i]))
+          {
+            Console.WriteLine(numbers[i]);
+            validValue = true;
+          }
+          else
+          {
+            Console.WriteLine("Por favor insira um valor valido");
+          };
 
-      //   };
-      // };
+        };
+      };
 
-      // foreach (int number in numbers)
-      // {
-      //   if (number % 2 == 0)
-      //   {
-      //     perValues++;
-      //   }
-      //   else
-      //   {
-      //     nonPerValues++;
-      //   }
+      foreach (int number in numbers)
+      {
+        if (number % 2 == 0)
+        {
+          perValues++;
+        }
+        else
+        {
+          nonPerValues++;
+        }
 
-      //   if (number < 0)
-      //   {
-      //     negativeValues++;
-      //   }
-      //   else if (number > 0)
-      //   {
-      //     positiveValues++;
-      //   }
-      // }
-      // Console.WriteLine($"A quantidade de numeros pares é{perValues}");
-      // Console.WriteLine($"A quantidade de numeros impares é{nonPerValues}");
-      // Console.WriteLine($"A quantidade de numeros Positivos é{positiveValues}");
-      // Console.WriteLine($"A quantidade de numeros Negativos é{negativeValues}");
+        if (number < 0)
+        {
+          negativeValues++;
+        }
+        else if (number > 0)
+        {
+          positiveValues++;
+        }
+      }
+      Console.WriteLine($"A quantidade de numeros pares é{perValues}");
+      Console.WriteLine($"A quantidade de numeros impares é{nonPerValues}");
+      Console.WriteLine($"A quantidade de numeros Positivos é{positiveValues}");
+      Console.WriteLine($"A quantidade de numeros Negativos é{negativeValues}");
 
 
       //Questão #02
-      // bool firstValueValid = false;
-      // bool secondValueValid = false;
-      // // Enquanto a variavel N1 nao for valida, continue rodando
-      // while (!firstValueValid)
-      // {
-      //   Console.Write("Digite o primeiro número (N1): ");
-      //   if (int.TryParse(Console.ReadLine(), out int n1))
-      //   {
-      //     //Se a variavel N1 for valida, mude a firstValueValid para true, para que o primeiro while pare
-      //     firstValueValid = true;
-      //     //enquanto a variavel N2 for invalida, continue perguntando
-      //     while (!secondValueValid)
-      //     {
-      //       Console.Write("Digite o segundo número (N2): ");
-      //       if (int.TryParse(Console.ReadLine(), out int n2))
-      //       {
-      //         //Se a variavel N2 for valida, mude a secondValueValid para true, para que o segundo while pare
-      //         secondValueValid = true;
-      //         //variavel que vai definir o valor da multiplicacao
-      //         int multiplicacao = 0;
-      //         //variavel que vai definir o valor da divisao inteira
-      //         int divisaoInteira = 0;
+      bool firstValueValid = false;
+      bool secondValueValid = false;
+      // Enquanto a variavel N1 nao for valida, continue rodando
+      while (!firstValueValid)
+      {
+        Console.Write("Digite o primeiro número (N1): ");
+        if (int.TryParse(Console.ReadLine(), out int n1))
+        {
+          //Se a variavel N1 for valida, mude a firstValueValid para true, para que o primeiro while pare
+          firstValueValid = true;
+          //enquanto a variavel N2 for invalida, continue perguntando
+          while (!secondValueValid)
+          {
+            Console.Write("Digite o segundo número (N2): ");
+            if (int.TryParse(Console.ReadLine(), out int n2))
+            {
+              //Se a variavel N2 for valida, mude a secondValueValid para true, para que o segundo while pare
+              secondValueValid = true;
+              //variavel que vai definir o valor da multiplicacao
+              int multiplicacao = 0;
+              //variavel que vai definir o valor da divisao inteira
+              int divisaoInteira = 0;
 
-      //         // Calculando a multiplicação
-      //         // Metodo Math.Abs pega o valor absoluto de um numero, ou seja, a distancia dele ate zero
-      //         // Ex: o valor absoluto de -5 é 5
-      //         // o valor absoluto de 10 é 10
-      //         for (int i = 0; i < Math.Abs(n2); i++)
-      //         {
-      //           multiplicacao += Math.Abs(n1);
-      //         }
+              // Calculando a multiplicação
+              // Metodo Math.Abs pega o valor absoluto de um numero, ou seja, a distancia dele ate zero
+              // Ex: o valor absoluto de -5 é 5
+              // o valor absoluto de 10 é 10
+              for (int i = 0; i < Math.Abs(n2); i++)
+              {
+                multiplicacao += Math.Abs(n1);
+              }
 
-      //         // Verificando o sinal do resultado da multiplicação
-      //         // Se N1 for maior que zero e N2 for menor que 0
-      //         // OU 
-      //         // Se N1 for menor que zero e N2 for maior que 0
-      //         // esse IF vai inverter o sinal da multiplicacao
-      //         if ((n1 > 0 && n2 < 0) || (n1 < 0 && n2 > 0))
-      //         {
-      //           multiplicacao = -multiplicacao;
-      //         }
+              // Verificando o sinal do resultado da multiplicação
+              // Se N1 for maior que zero e N2 for menor que 0
+              // OU 
+              // Se N1 for menor que zero e N2 for maior que 0
+              // esse IF vai inverter o sinal da multiplicacao
+              if ((n1 > 0 && n2 < 0) || (n1 < 0 && n2 > 0))
+              {
+                multiplicacao = -multiplicacao;
+              }
 
-      //         // Calculando a divisão inteira
-      //         int absN1 = Math.Abs(n1);
-      //         int absN2 = Math.Abs(n2);
-      //         //Enquanto valor absoluto de N1 for maior ou igual ao valor absoluto de N2
-      //         // O valor absoluto de N1 deve ser subtraido pelo valor absoluto de N2
-      //         // E a divisao inteira deve somar mais 1
-      //         while (absN1 >= absN2)
-      //         {
-      //           absN1 -= absN2;
-      //           divisaoInteira++;
-      //         }
-      //         // Verificando o sinal do resultado da divisão inteira
-      //         // Se N1 for maior que zero e N2 for menor que 0
-      //         // OU 
-      //         // Se N1 for menor que zero e N2 for maior que 0
-      //         // esse IF vai inverter o sinal da divisao
-      //         if ((n1 > 0 && n2 < 0) || (n1 < 0 && n2 > 0))
-      //         {
-      //           divisaoInteira = -divisaoInteira;
-      //         }
+              // Calculando a divisão inteira
+              int absN1 = Math.Abs(n1);
+              int absN2 = Math.Abs(n2);
+              //Enquanto valor absoluto de N1 for maior ou igual ao valor absoluto de N2
+              // O valor absoluto de N1 deve ser subtraido pelo valor absoluto de N2
+              // E a divisao inteira deve somar mais 1
+              while (absN1 >= absN2)
+              {
+                absN1 -= absN2;
+                divisaoInteira++;
+              }
+              // Verificando o sinal do resultado da divisão inteira
+              // Se N1 for maior que zero e N2 for menor que 0
+              // OU 
+              // Se N1 for menor que zero e N2 for maior que 0
+              // esse IF vai inverter o sinal da divisao
+              if ((n1 > 0 && n2 < 0) || (n1 < 0 && n2 > 0))
+              {
+                divisaoInteira = -divisaoInteira;
+              }
 
-      //         Console.WriteLine($"Multiplicação: {multiplicacao}");
-      //         Console.WriteLine($"Divisão Inteira: {divisaoInteira}");
-      //       }
-      //       else
-      //       {
-      //         Console.WriteLine("Digite um valor valido para N2");
-      //       }
-      //     }
+              Console.WriteLine($"Multiplicação: {multiplicacao}");
+              Console.WriteLine($"Divisão Inteira: {divisaoInteira}");
+            }
+            else
+            {
+              Console.WriteLine("Digite um valor valido para N2");
+            }
+          }
 
-      //   }
-      //   else
-      //   {
-      //     Console.WriteLine("Digite um valor valido para N1");
-      //   }
-      // }
+        }
+        else
+        {
+          Console.WriteLine("Digite um valor valido para N1");
+        }
+      }
 
       //Questão#03
       // Cria uma variavel para verificar se a frase eh valida
