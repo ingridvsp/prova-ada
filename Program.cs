@@ -14,49 +14,66 @@ namespace Prova
     {
       // Questão #01
       Console.WriteLine("Digite 5 numeros");
+      //  Cria uma array básica com cicno elementos
       int[] numbers = new int[5];
-
+      //Cria uma variável para contar os valores pares
       int perValues = 0;
+      //Cria uma variável para contar os valores inpares
       int nonPerValues = 0;
+      //Cria uma variável para contar os valores positivos
       int positiveValues = 0;
+      //Cria uma variável para contar os valores negativos
       int negativeValues = 0;
 
+      //Para cada elemento irá solicitar ao usuario que digite um numero
       for (int i = 0; i < numbers.Length; i++)
       {
+        // Cria uma variável para saber se o valor é válido
         bool validValue = false;
+        //Enquanto o valor não for válido, ele repete o elemento especifico
         while (!validValue)
         {
           Console.WriteLine($"Digite o {i + 1}° valor: ");
+          //Verifica se o valor é válido
           if (int.TryParse(Console.ReadLine(), out numbers[i]))
           {
-            Console.WriteLine(numbers[i]);
+            //Se o valor for válido, torna a variável validValue em true
             validValue = true;
           }
           else
           {
+            //Caso o valor não seja va´lido, solicita ao usuario que insira um valor válido
             Console.WriteLine("Por favor insira um valor valido");
           };
 
         };
       };
-
+      //Agora vaqmos calcular os numeros pares, impares, negativos e positivos
       foreach (int number in numbers)
       {
+        //Se o resto for igual a zero, o número é par
+        //Caso contrario, é impar
         if (number % 2 == 0)
         {
+          //Adiciona mais um a quantidade de numeros pares
           perValues++;
         }
         else
         {
+          //Adiciona mais um a quantidade de numeros inpares
           nonPerValues++;
         }
-
+        //Se o numero for menor que zero, é negativo
+        //Vale ressaltar que zero é considera um número neutro.
         if (number < 0)
         {
+          //Adiciona mais um a quantidade de numeros negativos
           negativeValues++;
         }
+        //Se for o numero for mais que zero, é positivo
         else if (number > 0)
         {
+          //Adiciona mais um a quantidade de numeros positivos
           positiveValues++;
         }
       }
